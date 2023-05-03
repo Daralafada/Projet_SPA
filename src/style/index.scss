@@ -1,0 +1,73 @@
+$main: black;
+
+@font-face {
+  font-family: 'Mont';
+  src: url(../assets/fonts/mont/Mont-HeavyDEMO.otf);
+}
+
+body {
+  background-color: $main;
+  color: white; 
+  font-family: 'Mont';
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h3 {
+  color: red;
+  font-size: 50px;
+}
+
+#search-bar {
+  width: 150px;
+  height: 20px;
+  padding: 5px;
+  font-size: 15px;
+  margin: 40px;
+}
+
+.page-list .articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cardGame {
+  width: 400px; 
+  margin: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black; 
+}
+
+.card-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: black;
+  color: white;
+  text-align:center;  
+  padding: 15px 20px; 
+  box-sizing: border-box; 
+
+}
+
+.mini-img {
+  max-height: 500px;
+  object-fit: fill;
+}
