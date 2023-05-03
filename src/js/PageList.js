@@ -29,6 +29,19 @@ export const PageList = (argument = '') => {
       resultsContainer.innerHTML = resultsContent.join("\n");
     };
 
+    const searchBar = document.querySelector('#search-bar');
+    searchBar.addEventListener('input', (event) => {
+      const searchWord = searchBar.value.trim();
+      if (searchWord !== '') { 
+        const url = `https://api.rawg.io/api/games?key=422f2cd668a24b1b9efcbd021fe21558&search=${searchWord}`;
+        fetch(url)
+          .then((response) => response.json())
+          .then((responseData) => {
+            displayResults(responseData.results);
+          });
+      }
+    });
+
     const fetchList = (url, argument) => {
       const finalURL = argument ? `${url}&search=${argument}` : url;
       fetch(finalURL)
@@ -38,10 +51,7 @@ export const PageList = (argument = '') => {
         });
     };
 
-    const searchBar = document.querySelector('#search-bar');
-    const searchWord = searchBar.value.trim();
-
-    fetchList(`https://api.rawg.io/api/games?key=422f2cd668a24b1b9efcbd021fe21558`, searchWord);
+    fetchList(`https://api.rawg.io/api/games?key=422f2cd668a24b1b9efcbd021fe21558`);
   };
   
   const render = () => {

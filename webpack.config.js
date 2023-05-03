@@ -83,3 +83,5 @@ module.exports = {
   // par exemple, pas besoin de minifier notre code.
   mode: 'development',
 };
+
+

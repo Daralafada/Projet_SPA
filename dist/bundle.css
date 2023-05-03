@@ -17,9 +17,10 @@ body {
   align-items: center;
 }
 
-.nav h3 {
+.nav h3 a {
   color: red;
   font-size: 50px;
+  text-decoration: none;
 }
 
 #search-bar {
@@ -36,9 +37,9 @@ body {
   justify-content: space-between;
 }
 
-.card-title {
+.card-title, title {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -68,5 +69,12 @@ body {
 
 .mini-img {
   max-height: 500px;
-  object-fit: fill;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rating {
+  color: red;
 }
